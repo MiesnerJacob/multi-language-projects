@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "expense-tracker"
+version = "1.0.0"
+description = "A simple CLI tool to track expenses"
+authors = [
+    { name = "Jacob Miesner", email = "miesner.jacob@gmail.com" }
+]
+license = { text = "MIT" }
+dependencies = [
+]
+keywords = ["expenses", "cli", "tracker"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+expense-tracker = "expense_tracker.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["expense_tracker"]
